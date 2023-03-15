@@ -28,4 +28,35 @@ type IParams = {
     logit_bias？: Map<string, string>
 }
 
+
+//
+type IModel = "gpt-3.5-turbo"
+type IParams = {
+    messages: IMessage[];
+    suffix?: string;
+    max_tokens?: number;
+    temperature?: number; // value [0, 2]
+    top_p?: number; // [0, 1]
+    n?: number; //  how many result you want to generate.
+    presence_penalty?: number // [-2, 2]
+    frequency_penalty?: number // [-2, 2]
+    best_of?: number // integer  bigger than n
+    logit_bias？: Map<string, string>
+}
+type IMessage = {
+    role: "user" | "assistant" | "ststem",
+    content: string;
+}
+```
+
+Response
+
+```
+{
+    code: number;
+    data: {
+        result: string
+    };
+    errorMessage: string;
+}
 ```
