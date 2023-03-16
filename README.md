@@ -44,7 +44,7 @@ type IParams = {
     logit_bias？: Map<string, string>
 }
 type IMessage = {
-    role: "user" | "assistant" | "ststem",
+    role: "user" | "assistant" | "system",
     content: string;
 }
 ```
@@ -55,7 +55,10 @@ Response
 {
     code: number;
     data: {
-        result: string
+        result: {
+            role: "user" | "assistant" | "system",
+            content: string
+        }
     };
     errorMessage: string;
 }
