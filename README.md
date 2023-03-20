@@ -78,8 +78,10 @@ Request params
 
 type IPrompt = {
     id: string;
+    mid: "gpt-3.5-turbo" | "text-davinci-003" | "text-davinci-002",
     prompt: string;
-    dependenceIdList?: string[]
+    dependenceIdList?: string[],
+    params: {}
 }
 ```
 
