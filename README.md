@@ -89,8 +89,8 @@ Response data
 
 ```
 {
-    code: number;
-    errorMessage: string;
+    statusCode: number;
+    message: string;
     data: {
         missionId: string
     }
@@ -100,7 +100,7 @@ Response data
 
 ### 任务结果查询接口
 
-URL: /api/completion/mission
+URL: /api/completion/mission-query
 GET
 
 Request params
@@ -115,13 +115,30 @@ Response data
 
 ```
 {
-    code: number;
-    errorMessage: string;
+    statusCode: number;
+    message: string;
     data: IPromptResult[]
 }
 
 type IPromptResult = {
     id: string; // 与请求参数中promptList中每一条的id一一对应
     content: string; // 每一条prompt对应的结果
+}
+```
+
+error response
+
+```
+//任务还未完成
+{
+	"statusCode": 1100,
+	"message": "mission not finished yet."
+}
+
+//参数错误，任务id错误
+
+{
+    "statusCode": 400,
+	"message": "Bad Request"
 }
 ```
