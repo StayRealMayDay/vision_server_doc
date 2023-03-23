@@ -91,6 +91,32 @@ Response data
 {
     code: number;
     errorMessage: string;
+    data: {
+        missionId: string
+    }
+}
+
+```
+
+### 任务结果查询接口
+
+URL: /api/completion/mission
+GET
+
+Request params
+
+```
+{
+    missionId: string
+}
+```
+
+Response data
+
+```
+{
+    code: number;
+    errorMessage: string;
     data: IPromptResult[]
 }
 
