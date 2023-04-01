@@ -142,3 +142,13 @@ error response
 	"message": "Bad Request"
 }
 ```
+
+## 认证
+
+需要在请求头带上 Authorization 字段
+
+```
+{
+    Authorization: "Vision chat"
+}
+```
