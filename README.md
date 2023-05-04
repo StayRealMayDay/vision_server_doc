@@ -152,3 +152,33 @@ error response
     Authorization: "Vision chat"
 }
 ```
+
+## stream 任务生成
+
+URL: /api/completion/st/generate
+
+Request params
+
+```
+{
+    missionId: string
+}
+```
+
+Response data
+
+```
+
+// id是对应node节点的id.
+
+{
+    "id":"2","object":"text_completion","created":1683214696,"choices":[{"text":"","index":0,"logprobs":null,"finish_reason":"stop"}],"model":"text-davinci-003"
+}
+
+// 每一个节点结束时，会返回一个如下数据告知某一个节点已经结束
+{"id":"2","statue":"[DONE]"}
+
+// 当任务结束时，会返回如下数据告知任务已经结束。
+{"missionId":"xxx","statue":"[FINISHED]"}
+
+```
