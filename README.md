@@ -161,7 +161,13 @@ Request params
 
 ```
 {
-    missionId: string
+    "promptList": [
+        {
+            "mid": "gpt-3.5-turbo",
+            "id": "50561a82-aa00-41c8-8091-1e50e22fb5f2",
+            "prompt": "\"你是谁\""
+        }
+    ]
 }
 ```
 
