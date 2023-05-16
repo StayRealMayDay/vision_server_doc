@@ -188,3 +188,91 @@ Response data
 {"missionId":"xxx","statue":"[FINISHED]"}
 
 ```
+
+## 创建订单
+
+URL: /api/payment/order/create
+
+Method: POST
+
+Request params
+
+```
+{
+    type: "tecent-pay" | "alipay"
+    price: number;
+    orderId: string;
+    uid: string;
+    productLine: string;
+    noticeUrl?: string;
+    ext?: string;
+}
+```
+
+Response
+
+```
+{
+    statusCode: number;
+    message: string;
+    data:  null;
+}
+```
+
+## 单个订单查询
+
+URL: /api/payment/order/query-by-id
+
+Method: GEt
+
+Request params
+
+```
+{
+    orderId: string;
+}
+```
+
+Response
+
+```
+{
+    statusCode: number;
+    message: string;
+    data:  {
+        status: 0 | 1 | 2;  // 0 未付款， 1 已付款， 2 已退款
+        uid: string;
+        price: number;
+        productLine: string;
+    };  // 返回一个数组
+}
+```
+
+## 多订单查询
+
+URL: /api/payment/order/query
+
+Method: GEt
+
+Request params
+
+```
+{
+    orderId: string;
+}
+```
+
+Response
+
+```
+{
+    statusCode: number;
+    message: string;
+    data:  {
+        status: 0 | 1 | 2;  // 0 未付款， 1 已付款， 2 已退款
+        uid: string;
+        price: number;
+        productLine: string;
+    };  // 返回一个数组
+}
+```
