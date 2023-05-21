@@ -269,10 +269,26 @@ Response
     statusCode: number;
     message: string;
     data:  {
-        status: 0 | 1 | 2;  // 0 未付款， 1 已付款， 2 已退款
+        status: 0 | 1 | 2;  // -1 订单错误 0 未付款， 1 已付款， 2 付款失败 3 已退款
         uid: string;
         price: number;
         productLine: string;
     };  // 返回一个数组
+}
+```
+
+## 接受订单回调 权限开通
+
+URL: /api/payment/notify
+
+Method: POST
+
+Request params
+
+```
+{
+    uid: string;
+    productId: string;
+    amount: number;
 }
 ```
