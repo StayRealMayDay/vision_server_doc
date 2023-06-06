@@ -243,17 +243,20 @@ Response
 {
     statusCode: number;
     message: string;
-    data:  {
-        status: 0 | 1 | 2;  // 0 未付款， 1 已付款， 2 已退款
-        type: "tecent-pay" | "alipay"
-        price: number; // 单价
-        totalPrice: number;    // 总价
-        uid: string;   // 用户id
-        amount: number; // 总价 单位是分 100  = 1块钱
-        productId: string; // 商品id
-        promoCode: string; //优惠码
-        productLine: string; // 产品线
-    };
+    data:  	{
+				"id": 13,
+				"uid": "xxxx",
+				"orderId": "ff8c68aeceb34401bf2fa8c58ab02a20",
+				"price": 100,
+				"totalPrice": 12000,
+				"amount": 12,
+				"promoCode": "",
+				"productId": "abc",
+				"status": 0,
+				"productLine": "test",
+				"updateTime": "2023-06-06T14:39:05.993Z",
+				"createTime": "2023-06-06T14:39:05.993Z"
+			}
 }
 ```
 
