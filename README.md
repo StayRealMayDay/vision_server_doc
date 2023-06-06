@@ -278,41 +278,27 @@ Response
 
 ```
 {
-   {
 	"data": {
 		"list": [
 			{
-				"id": 11,
+				"id": 13,
 				"uid": "xxxx",
-				"orderId": "8e7cdcd5910e4e689bd66967be153f7b",
+				"orderId": "ff8c68aeceb34401bf2fa8c58ab02a20",
 				"price": 100,
 				"totalPrice": 12000,
 				"amount": 12,
 				"promoCode": "",
 				"productId": "abc",
 				"status": 0,
-				"updateTime": "2023-06-06T14:07:45.406Z",
-				"createTime": "2023-06-06T14:07:45.406Z"
-			},
-			{
-				"id": 10,
-				"uid": "xxxx",
-				"orderId": "4f65c8c7c1a84ab5b853af20550c1977",
-				"price": 100,
-				"totalPrice": 12000,
-				"amount": 12,
-				"promoCode": "",
-				"productId": "abc",
-				"status": 0,
-				"updateTime": "2023-06-01T02:35:59.553Z",
-				"createTime": "2023-06-01T02:35:59.553Z"
+				"productLine": "test",
+				"updateTime": "2023-06-06T14:39:05.993Z",
+				"createTime": "2023-06-06T14:39:05.993Z"
 			}
 		],
-		"total": 2
+		"total": 1
 	},
 	"statusCode": 0,
 	"errorMessage": ""
-}
 }
 ```
 
