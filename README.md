@@ -278,21 +278,41 @@ Response
 
 ```
 {
-    statusCode: number;
-    message: string;
-    data:  {
-        "status": 0 | 1 | 2;  // 0 未付款， 1 已付款， 2 已退款
-        "id": 10,
-        "uid": "xxxx",
-        "orderId": "4f65c8c7c1a84ab5b853af20550c1977",
-        "price": 100, // 单位分
-        "totalPrice": 12000,
-        "amount": 12,
-        "promoCode": "",
-        "productId": "abc",
-        "updateTime": "2023-06-01T02:35:59.553Z",
-        "createTime": "2023-06-01T02:35:59.553Z"
-    }[];  // 返回一个数组
+   {
+	"data": {
+		"list": [
+			{
+				"id": 11,
+				"uid": "xxxx",
+				"orderId": "8e7cdcd5910e4e689bd66967be153f7b",
+				"price": 100,
+				"totalPrice": 12000,
+				"amount": 12,
+				"promoCode": "",
+				"productId": "abc",
+				"status": 0,
+				"updateTime": "2023-06-06T14:07:45.406Z",
+				"createTime": "2023-06-06T14:07:45.406Z"
+			},
+			{
+				"id": 10,
+				"uid": "xxxx",
+				"orderId": "4f65c8c7c1a84ab5b853af20550c1977",
+				"price": 100,
+				"totalPrice": 12000,
+				"amount": 12,
+				"promoCode": "",
+				"productId": "abc",
+				"status": 0,
+				"updateTime": "2023-06-01T02:35:59.553Z",
+				"createTime": "2023-06-01T02:35:59.553Z"
+			}
+		],
+		"total": 2
+	},
+	"statusCode": 0,
+	"errorMessage": ""
+}
 }
 ```
 
