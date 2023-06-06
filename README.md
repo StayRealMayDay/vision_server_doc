@@ -200,12 +200,14 @@ Request params
 ```
 {
     type: "tecent-pay" | "alipay"
-    price: number;
-    orderId: string;
-    uid: string;
-    productLine: string;
-    noticeUrl?: string;
-    ext?: string;
+    price: number; // 单价
+    totalPrice: number;    // 总价
+    uid: string;   // 用户id
+    amount: number; // 总价 单位是分 100  = 1块钱
+    productId: string; // 商品id
+    promoCode: string; //优惠码
+    productLine: string; // 产品线
+    ext?: string;    // 预留字段
 }
 ```
 
@@ -215,7 +217,9 @@ Response
 {
     statusCode: number;
     message: string;
-    data:  null;
+    data:  {
+        url: string; // 二维码url
+    };
 }
 ```
 
@@ -241,10 +245,15 @@ Response
     message: string;
     data:  {
         status: 0 | 1 | 2;  // 0 未付款， 1 已付款， 2 已退款
-        uid: string;
-        price: number;
-        productLine: string;
-    };  // 返回一个数组
+        type: "tecent-pay" | "alipay"
+        price: number; // 单价
+        totalPrice: number;    // 总价
+        uid: string;   // 用户id
+        amount: number; // 总价 单位是分 100  = 1块钱
+        productId: string; // 商品id
+        promoCode: string; //优惠码
+        productLine: string; // 产品线
+    };
 }
 ```
 
@@ -258,7 +267,10 @@ Request params
 
 ```
 {
-    orderId: string;
+    page: number;
+    pageSize: number;
+    uid: string;  // 用户id
+    productLine: string; // 产品线
 }
 ```
 
@@ -269,11 +281,18 @@ Response
     statusCode: number;
     message: string;
     data:  {
-        status: 0 | 1 | 2;  // -1 订单错误 0 未付款， 1 已付款， 2 付款失败 3 已退款
-        uid: string;
-        price: number;
-        productLine: string;
-    };  // 返回一个数组
+        "status": 0 | 1 | 2;  // 0 未付款， 1 已付款， 2 已退款
+        "id": 10,
+        "uid": "xxxx",
+        "orderId": "4f65c8c7c1a84ab5b853af20550c1977",
+        "price": 100, // 单位分
+        "totalPrice": 12000,
+        "amount": 12,
+        "promoCode": "",
+        "productId": "abc",
+        "updateTime": "2023-06-01T02:35:59.553Z",
+        "createTime": "2023-06-01T02:35:59.553Z"
+    }[];  // 返回一个数组
 }
 ```
 
