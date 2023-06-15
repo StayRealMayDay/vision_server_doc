@@ -207,6 +207,7 @@ Request params
     productId: string; // 商品id
     promoCode: string; //优惠码
     productLine: string; // 产品线
+    description: string; // 描述， 扫码付款的时候看到的描述
     ext?: string;    // 预留字段
 }
 ```
