@@ -191,7 +191,7 @@ Response data
 
 ## 创建订单
 
-URL: /api/payment/order/create
+URL: api/orders/create-order
 
 Method: POST
 
@@ -225,9 +225,9 @@ Response
 
 ## 单个订单查询
 
-URL: /api/payment/order/query-by-id
+URL: api/orders/query-order-by-id
 
-Method: GEt
+Method: GET
 
 Request params
 
@@ -262,7 +262,7 @@ Response
 
 ## 多订单查询
 
-URL: /api/payment/order/query
+URL: /api/orders/query-order-list
 
 Method: GEt
 
