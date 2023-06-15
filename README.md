@@ -306,9 +306,9 @@ Response
 }
 ```
 
-## 接受订单回调 权限开通
+## 接受订单回调 权限开通 光速写作
 
-URL: /api/payment/notify
+URL: /api/gsxz/payment/notify
 
 Method: POST
 
