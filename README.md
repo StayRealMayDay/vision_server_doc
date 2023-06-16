@@ -293,7 +293,7 @@ Response
 				"amount": 12,
 				"promoCode": "",
 				"productId": "abc",
-				"status": 0,
+				"status": 0, // 0 init, 1 付款成功， 2 付款失败 ， 3 已退款，-1 订单错误
 				"productLine": "test",
 				"updateTime": "2023-06-06T14:39:05.993Z",
 				"createTime": "2023-06-06T14:39:05.993Z"
@@ -306,7 +306,7 @@ Response
 }
 ```
 
-## 接受订单回调 权限开通 光速写作
+## 接受订单回调 权限开通 光速写作 productLine 就叫 gsxz
 
 URL: /api/gsxz/payment/notify
 
